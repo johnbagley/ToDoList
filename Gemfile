@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
 
+
+
 gem 'clearance'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
@@ -32,6 +34,12 @@ gem 'jbuilder', '~> 1.2'
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
+
+group :development do
+  gem "pry-rails"
+  gem "better_errors"
+  gem "binding_of_caller"
+  end
 end
 
 # Use ActiveModel has_secure_password

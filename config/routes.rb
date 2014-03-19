@@ -2,8 +2,9 @@ ToDoList::Application.routes.draw do
   
   root "lists#index"
 
-  
-
+  resources :lists, only: [:index, :new, :show, :create, :edit, :update, :destroy] do 
+    resources :tasks
+  end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
